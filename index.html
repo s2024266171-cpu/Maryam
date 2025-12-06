@@ -1,58 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Grid Template Areas with Containers</title>
+<style>
+
+/* MAIN CONTAINER */
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar content1 content1"
+    "sidebar content2 content3"
+    "footer footer footer";
+  
+  grid-template-columns: 200px 1fr 1fr;
+  grid-gap: 15px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* INDIVIDUAL CONTAINERS */
+.header {
+  grid-area: header;
+  background: #7a5cff;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #2fd09b;
+  padding: 20px;
+  min-height: 350px;
+  color: #000;
+  text-align: center;
+}
+
+.content1 {
+  grid-area: content1;
+  background: #e65fbd;
+  padding: 20px;
+  text-align: center;
+}
+
+.content2 {
+  grid-area: content2;
+  background: #15516e;
+  padding: 20px;
+  text-align: center;
+}
+
+.content3 {
+  grid-area: content3;
+  background: #f8b052;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  background: #6a39fa;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+</style>
 </head>
 <body>
-<h1>Heading 1</h1> 
-<hr>
-<h2>Heading 2</h2> 
-<hr>
-<h3>Heading 3</h3>  
-<hr>
-<h4>Heading 4</h4>
-<hr>
-<h5>Heading 5</h5>
-<hr>
-<p>Lorem ipsum dolor sit <b>testing 123</b> amet consectetur adipisicing elit.<i>Maryam</i> Nemo fuga quos ad ab sit iusto laudantium cupiditate atque velit facilis earum, voluptatem doloribus, voluptatibus mollitia distinctio? Reprehenderit incidunt officiis commodi.
 
-<a href="test.html"
-target="_blank">visit google</a>
-<img src="./capture.PNG" alt="UMT Main Page"
-width="300px">
-<audio src="" controls autoplay muted ></audio>
-<video src=""></video>
-<p>lorem ipsum dolor sit amet</p>
-<p>lorem ipsum dolor sit amet</p>
-<br>
-<p>lorem ipsum dolor sit amet</p>
-<p>lorem ipsum dolor sit amet</p>
-<ol type="i">
-    <li>HTML</li>
-<li>CSS</li>
-<li>JS</LI>
-</ol>
+<div class="container">
 
+  <div class="header">Header</div>
 
-<ul>
-    <table>
-        <tr>
-            <th>name</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>Maryam</td>
-            <td>@itxmaryam01gmail.com</td>
-        </tr>
-        <tr>
-            <td>Maryam</td>
-            <td>@itxmaryam01@gmail.com</td>
-        </tr>
+  <div class="sidebar">Sidebar</div>
 
-    </table>
+  <div class="content1">Content-1</div>
+
+  <div class="content2">Content-2</div>
+
+  <div class="content3">Content-3</div>
+
+  <div class="footer">Footer</div>
+
+</div>
 
 </body>
 </html>
